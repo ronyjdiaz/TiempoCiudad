@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Tiempo Ciudad</string>
+
+    <string name="lbl_you_are_at">Tu estás</string>
+    <string name="btn_get_location">Obtener mi ubicación</string>
+    <string name="btn_start_location_updates">Inicar actualización</string>
+    <string name="btn_stop_location_updates">Detener actualización</string>
+    <string name="pressure">Presión</string>
+    <string name="wind">Viento</string>
+    <string name="labelCond">Condiciones:</string>
+    <string name="labelTemp">Temperarura °C:</string>
+    <string name="textoCiudadesCercanas">Ciudades cercanas a mi ubicacion</string>
+    <string name="textoPronostico">Ir a Pronostico</string>
+
+
+</resources>
