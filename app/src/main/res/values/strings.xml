@@ -11,6 +11,8 @@
     <string name="labelTemp">Temperarura °C:</string>
     <string name="textoCiudadesCercanas">Ciudades cercanas a mi ubicacion</string>
     <string name="textoPronostico">Ir a Pronostico</string>
+    <string name="temp_max">Humedad:</string>
+    <string name="temp_min">Presión:</string>
 
 
 </resources>

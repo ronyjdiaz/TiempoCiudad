@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.a3vam.tiempociudad.R;
@@ -13,6 +14,7 @@ import com.a3vam.tiempociudad.model.Main;
 import com.a3vam.tiempociudad.model.Weather;
 import com.a3vam.tiempociudad.services.ServiceManager;
 import com.a3vam.tiempociudad.services.callbacks.Callbackpronostico;
+import com.google.android.gms.vision.text.Text;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -27,6 +29,8 @@ public class Pronostico extends BaseActivity {
     JsonObject jsonObject;
     ArrayList<Main> principal;
     AdapterPronostico adapter;
+    TextView tvNombreCiudad;
+    private String mNombreCiudad;
     ListView list;
 
     @Override
@@ -35,9 +39,13 @@ public class Pronostico extends BaseActivity {
         setContentView(R.layout.activity_pronostico);
 
         mIdCity2go = getIntent().getExtras().get("id").toString();
-        Toast.makeText(this,mIdCity2go,Toast.LENGTH_SHORT).show();
+        mNombreCiudad = getIntent().getExtras().get("nombreciudad").toString();
+
+        //Toast.makeText(this,mIdCity2go,Toast.LENGTH_SHORT).show();
         principal = new ArrayList<Main>();
         list = (ListView) findViewById(R.id.lvPronostico);
+        tvNombreCiudad = (TextView) findViewById(R.id.tvCiudad);
+        tvNombreCiudad.setText(mNombreCiudad);
         cargarPronostico(mIdCity2go);
         adapter = new AdapterPronostico(Pronostico.this, principal);
         list.setAdapter(adapter);

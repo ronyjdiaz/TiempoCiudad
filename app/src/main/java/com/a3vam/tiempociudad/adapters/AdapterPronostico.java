@@ -68,13 +68,13 @@ public class AdapterPronostico extends ArrayAdapter<Main> {
         }
 
         TextView tvTemp = (TextView) convertView.findViewById(R.id.tvTemperatura);
-        TextView tvTempMaxima = (TextView) convertView.findViewById(R.id.tvTemperaturaMinima);
+        TextView tvTempMaxima = (TextView) convertView.findViewById(R.id.tvTemperaturaMaxima);
         TextView tvTempMinima = (TextView) convertView.findViewById(R.id.tvTemperaturaMinima);
 
 
         tvTemp.setText( String.valueOf(pronostico.getTemp()));
-        tvTempMaxima.setText( String.valueOf(pronostico.getTempMax()));
-        tvTempMinima.setText( String.valueOf(pronostico.getTempMin()));
+        tvTempMaxima.setText( String.valueOf(pronostico.getHumidity()));
+        tvTempMinima.setText( String.valueOf(pronostico.getPressure()));
 
         // Return the completed view to render on screen
         return convertView;

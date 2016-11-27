@@ -263,6 +263,7 @@ public class MainActivity extends BaseActivity implements
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this,Pronostico.class);
                 intent.putExtra("id",mIdCity2go);
+                intent.putExtra("nombreciudad",spinnerCiudades.getSelectedItem().toString());
                 startActivity(intent);
                 //finish();
             }

@@ -25,12 +25,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.Pronostico"
+            android:screenOrientation="portrait">
+
+        </activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD6QIJQJyluJZA-I2bIkYD0Ih0zFLNJ_rE"></meta-data>
 
-        <activity android:name=".activities.Pronostico"></activity>
+
     </application>
 
 </manifest>
